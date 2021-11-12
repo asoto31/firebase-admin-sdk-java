@@ -38,3 +38,5 @@ out/
 
 ### Firebase Service Account ###
 sa.json
+
+**/.DS_Store

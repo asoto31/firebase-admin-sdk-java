@@ -15,9 +15,9 @@ public class AdminSdkReplicatorApplication {
 	public static void main(String[] args) throws IOException {
 		SpringApplication.run(AdminSdkReplicatorApplication.class, args);
 
-		FileInputStream serviceAccount = new FileInputStream("sa.json");
+		//FileInputStream serviceAccount = new FileInputStream("sa.json");
 		FirebaseOptions options = FirebaseOptions.builder()
-				.setCredentials(GoogleCredentials.fromStream(serviceAccount))
+				.setCredentials(GoogleCredentials.getApplicationDefault())
 				.setDatabaseUrl("https://replicator-37607.firebaseio.com/")
 				.build();
 		FirebaseApp.initializeApp(options);

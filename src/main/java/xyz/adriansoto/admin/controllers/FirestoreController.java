@@ -53,7 +53,7 @@ public class FirestoreController {
         }
         Firestore db = FirestoreClient.getFirestore();
         ApiFuture<WriteResult> future = db.collection((String) payload.get("collection")).document((String) payload.get("document")).set(payload.get("payload"));
-        return "Document: " + payload.get("collection") + "/" + payload.get("document") + ", deleted";
+        return "Document: " + payload.get("collection") + "/" + payload.get("document") + ", created";
     }
 
     @DeleteMapping("deleteDocument/{col}/{doc}")
